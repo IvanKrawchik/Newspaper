@@ -1,109 +1,273 @@
 *{
     margin:0px;
-}
-/* MENU RESPONSIVE */
-
-header{
-    position: fixed;
-    width: 100%;
-    background: grey;
-    height: 50px;
-    z-index: 10;
-}
-
-header label{
-    display: none;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-}
-
-#logo{
-    font-size: 30px;
-}
-#menu-lines:hover{
-    background-color: #555555;
-}
-
-#btn-menu{
-    display: none;
-}
-
-.menu{
-    position: relative;
-    top: 32px;
-    z-index: -1;
-}
-
-.menu ul{
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-.menu li a{
-    display: inline-block;
-    margin: 10%;
-    color: black;
     text-decoration: none;
 }
-#menu-arrow-torneos{
-    display: none;
-}
 
-#menu-arrow-juegos{
-    display: none;
-}
-#menu-arrow-equipos{
-    display: none;
-}
+/* MENU RESPONSIVE */
 
-.menu li:hover{
-    background-color: #555555;
+.wrapper{
+    background: #171c24;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
-.menu-button{
-    float: right;
-    margin-top: 7%;
+.wrapper nav{
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .content{
+    display: flex;
+    align-items: center;
+}
+nav .content .links{
+    margin-left: 80px;
+    display: flex;
+}
+.content .logo a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+.content .links li{
+    list-style: none;
+    line-height: 70px;
+}
+.content .links li a,
+.content .links li label{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.content .links li label{
+    display: none;
+}
+.content .links li a:hover,
+.content .links li label:hover{
+    background: #323c4e;
+}
+.wrapper .search-icon,
+.wrapper .menu-icon{
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+}
+.wrapper .menu-icon{
+    display: none;
+}
+.wrapper #show-search:checked ~ .search-icon i::before{
+    content: "\f00d";
+}
+.wrapper .search-box{
+    position: absolute;
+    height: 100%;
+    max-width: calc(100% - 50px);
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.wrapper #show-search:checked ~ .search-box{
+    opacity: 1;
+    pointer-events: auto;
+}
+.search-box input{
+    width: 100%;
+    height: 100%;
     border: none;
+    outline: none;
+    font-size: 17px;
+    color: #fff;
+    background: #171c24;
+    padding: 0 100px 0 15px;
 }
-#subtitulo{
-    font-size: 14px;
-    color: #B5B1B0;
-    margin-left: 25%;
-    color: red;
+.search-box .go-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 60px;
+    width: 70px;
+    background: #171c24;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
 }
-
-.litorneo:checked ~ #subtitulo{
-    color: white;
+.wrapper input[type="checkbox"]{
+    display: none;
 }
-
-
-@media(max-width:2000px) {
-    header label{
-        display: inline-block;
+  /* Dropdown Menu code start */
+.content .links ul{
+    position: absolute;
+    background: #171c24;
+    top: 80px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+.content .links li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+.content .links ul li a{
+    display: block;
+    line-height: 30px;
+    border-radius: 0px!important;
+    padding: 4.5px 0px 4.5px 10px;
+}
+li ul{ 
+    width: 280px;
+}
+.content .links ul ul{
+    position: absolute;
+    top: 0;
+    right: calc(-100% + 8px);
+}
+.content .links ul li{
+    position: relative;
+}
+.content .links ul li:hover ul{
+    top: 0;
+}
+  /* Responsive code start */
+@media screen and (max-width: 1250px){
+    .wrapper nav{
+        max-width: 100%;
+        padding: 0 20px;
     }
-
-    .menu{
-        position: absolute;
-        background: grey;
-        width: 20%;
-        margin-left: -70%;
-        transition: all 0.5s;
+    .wrapper .search-box{
+        max-width: calc(100% - 100px);
     }
-
-    .menu ul{
-        flex-direction: column;
+}
+@media screen and (max-width: 1024px){
+    .wrapper .menu-icon{
+        display: block;
     }
-
-    #btn-menu:checked ~ .menu{
+    .wrapper #show-menu:checked ~ .menu-icon i::before{
+        content: "\f00d";
+    }
+    nav .content .links{
+        display: block;
+        position: fixed;
+        background: #14181f;
+        height: 100%;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        margin-left: 0;
+        max-width: 350px;
+        overflow-y: auto;
+        padding-bottom: 100px;
+        transition: all 0.3s ease;
+    }
+    nav #show-menu:checked ~ .content .links{
+        left: 0%;
+    }
+    .content .links li{
+        margin: 15px 20px;
+    }
+    .content .links li a,
+    .content .links li label{
+        line-height: 40px;
+        font-size: 20px;
+        display: block;
+        padding: 8px 18px;
+        cursor: pointer;
+    }
+    .content .links li a.desktop-link{
+        display: none;
+    }
+    /* dropdown responsive code start */
+    .content .links ul,
+    .content .links ul ul{
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        background: none;
+        max-height: 0px;
+        overflow: hidden;
+    }
+    .content .links #show-torneos:checked ~ ul,
+    .content .links #show-equipos:checked ~ ul,
+    .content .links #show-juegos:checked ~ ul{
+        max-height: 100vh;
+    }
+    .content .links ul li{
+        margin: 7px 20px;
+    }
+    .content .links ul li a{
+        font-size: 18px;
+        line-height: 30px;
+        border-radius: 5px!important;
+    }
+    .ulsub{
         margin: 0;
     }
 }
-
-h1 {
-    display:block;
-    text-align: center;
+@media screen and (max-width: 400px){
+    .wrapper nav{
+        padding: 0 10px;
+    }
+    .content .logo a{
+        font-size: 27px;
+    }
+    .wrapper .search-box{
+        max-width: calc(100% - 70px);
+    }
+    .wrapper .search-box .go-icon{
+        width: 30px;
+        right: 0;
+    }
+    .wrapper .search-box input{
+        padding-right: 30px;
+    }
+    }
+    .fa-chevron-down{
+        float: right;
+        padding-top: 5%;
+    }
+    .content .links{
+        margin: 0;
+        padding: 0;
+    }
+.ulsub{
+    padding: 0;
+}
+a .subtitulo{
+    margin: 0;
+}
+.nombre{
+    text-decoration: underline;
+}
+.menu-titulos{
+    padding: 0% 5% 0% 5%;
+}
+.menu-titulos1{
+    padding: 0% 5% 0% 55%;
+}
+@media (max-width:1400px){
+    .menu-titulos1{
+        padding: 0% 5% 0% 25%;
+    }
+}
+@media (max-width:1150px){
+    .menu-titulos1{
+        padding: 0% 5% 0% 5%;
+    }
 }
 
 
@@ -139,16 +303,16 @@ img{
 
 /* BOTON */
 
-.boton:hover{
-    background-color: #555555;
+#top:hover{
+    background-color: #323c4e;
 }
 #top{
     position: fixed;
     bottom: 0px;
     right: -100px;
-    color: black;
+    color: #fff;
     transition: all 1s;
-    background-color: grey;
+    background-color: #171c24;
     width: 60px;
     height: 40px;
     font-size: 30px;
@@ -157,29 +321,36 @@ img{
 }
 
 
-
 /* FOOTER */
 
 h4, h5{
     text-align: center;
     padding-bottom: 1%;
+    color: #fff;
+}
+h4{
+    padding-top: 1%;
 }
 
-footer p{
+.copyright{
     text-align: center;
     font-size: 14px;
     color: #949494;
+    padding: 1% 0% 0.5% 0%;
 }
 footer{
-    background-color: grey;
-    border-top: 7px #555555 solid;
-    margin-top: 3%;
+    background-color: #171c24;
+    border-top: 7px #323c4e solid;
+    margin-top: 5%;
 }
 .emojis{
-    padding: 0% 15% 0% 15%;
+    text-align: center;
 }
 .emojis i{
-    padding: 1% 0% 2% 22%;
+    padding: 0% 5% 0% 5%;
     font-size: 30px;
-    color: black;
+    color: #fff;
+}
+.emojis i:hover{
+    color: #323c4e;
 }

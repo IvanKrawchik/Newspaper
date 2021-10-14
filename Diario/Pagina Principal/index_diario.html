@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="index_diario.css">
     <script src="https://kit.fontawesome.com/b79f9ca1bd.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <script src="index_diario.js"></script>
-    <script src="/js/index_diario.js"></script>
+    <!--<script src="C:\Users\Administrador\Desktop\Programacion\Tecnicatura\Base de datos\Diario\js"></script> -->
 </head>
 
 <body>
@@ -17,7 +16,9 @@
                 <input type="checkbox" id="show-menu">
                 <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
                 <div class="content">
-                <div class="logo"><a href="#index_diario.html" class="nombre">Diario Gamer</a></div>
+                <div class="logo">
+                    <a href="#index_diario.html" class="nombre">Diario Gamer</a>
+                </div>
                     <ul class="links">
                         <li class="menu-titulos1"><a href="#" class="menu-titulos">Inicio</a></li>
                         <li class="menu-titulos">
@@ -25,9 +26,10 @@
                             <input type="checkbox" id="show-torneos">
                             <label for="show-torneos" class="menu-titulos">Torneos<i class="fas fa-chevron-down"></i></label>
                             <ul class="ulsub">
-                                <li><a href="#" >Torneos 1</a></li>
-                                <li><a href="#" >Torneos 2</a></li>
-                                <li><a href="#" >Torneos 3</a></li>
+                                <li><a href="#" >- Fortnite World Cup</a></li>
+                                <li><a href="#" >- League of Legends World Championship</a></li>
+                                <li><a href="#" >- Major CS:GO</a></li>
+                                <li><a href="#" >- FIFAe WORLD CUP 2022</a></li>
                             </ul>
                         </li>
                         <li class="menu-titulos">
@@ -35,9 +37,10 @@
                             <input type="checkbox" id="show-equipos">
                             <label for="show-equipos">Equipos <i class="fas fa-chevron-down"></i></label>
                             <ul class="ulsub">
-                                <li><a href="#">Equipos 1</a></li>
-                                <li><a href="#">Equipos 2</a></li>
-                                <li><a href="#">Equipos 3</a></li>
+                                <li><a href="#">- 9z</a></li>
+                                <li><a href="#">- Ebro Gaming</a></li>
+                                <li><a href="#">- KRU Esports</a></li>
+                                <li><a href="#">- Mad Lions</a></li>
                             </ul>
                         </li>
                         <li class="menu-titulos">
@@ -45,9 +48,10 @@
                             <input type="checkbox" id="show-juegos">
                             <label for="show-juegos">Juegos <i class="fas fa-chevron-down"></i></label>
                             <ul class="ulsub">
-                                <li><a href="#">Juegos 1</a></li>
-                                <li><a href="#">Juegos 2</a></li>
-                                <li><a href="#">Juegos 3</a></li>
+                                <li><a href="#">- CS:GO</a></li>
+                                <li><a href="#">- FIFA 22</a></li>
+                                <li><a href="#">- Fortnite</a></li>
+                                <li><a href="#">- League of Legends</a></li>
                             </ul>
                         </li>
                         <li class="menu-titulos"><a href="#footer" >Contactanos</a></li>
@@ -62,46 +66,32 @@
 <!-- SLIDER 1 -->
     <div class="ultimasnoticias">
         <div class="slideshow-container">
-            <div class="mySlides fade">
+            <article class="mySlides fade">
                 <a href="torneos.html"><img id="imgt1" src="torneo1.jpg" alt="Imagen"></a>
                 <div class="text">
                     <h3 class="titulo_torneos">Fortnite World Cup</h3>
                     <p class="cuerpo">Nuevas fechas de clasificacion para el mundial de Fortnite.</p>
                 </div>
                 <div class="separador"></div>
-            </div>
-            <div class="mySlides fade">
+            </article>
+            <article class="mySlides fade">
                 <a href="torneos.html"><img id="imgt2" src="torneo2.jpg" alt="Imagen"></a>
                 <div class="text">
                     <h3 class="titulo_torneos">Major CS:GO</h3>
                     <p class="cuerpo">Cuando se juega el Major de CS:GO?</p>
                 </div>
                 <div class="separador"></div>
-            </div>
-            <div class="mySlides fade">
+            </article>
+            <article class="mySlides fade">
                 <a href="torneos.html"><img id="imgt3" src="torneo3.png" alt="Imagen"></a>
                 <div class="text">
                     <h3 class="titulo_torneos">League of Legends World Championship</h3>
                     <p class="cuerpo" id="p1">El torneo mas importante de League of Legends va a tener un nuevo equipo argentino debutando en el torneo.</p>
                 </div>
                 <div class="separador"></div>
-            </div>
+            </article>
         </div>
-            <script>
-                var slideIndex = 0;
-                showSlides();
-                function showSlides() {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                    }
-                    slideIndex++;
-                    if(slideIndex > slides.length) {slideIndex = 1}
-                    slides[slideIndex-1].style.display = "block";
-                    setTimeout(showSlides,4000);
-                }
-            </script>    
+                
 
 <!-- SLIDERS EXTRAS
 
@@ -195,41 +185,28 @@ SLIDER 3
 
 -->
 
-        <div class="noticia1"><a href="juegos.html"><img id="imgj1" src="juego1.jpg"></a>
+        <article class="noticia1">
+            <a href="juegos.html"><img id="imgj1" src="juego1.jpg" alt="Imagen"></a>
             <h3 class="juegos">CS GO</h3>
             <p>Subtitulo explicativo de la noticia de videojuegos.</p>
             <div class="separador"></div>
-        </div>
+        </article>
 
-        <div class="noticia2"><a href="equipos.html"><img id="imge1" src="equipo1.png" alt="Imagen"/></a>
+        <article class="noticia2">
+            <a href="equipos.html"><img id="imge1" src="equipo1.png" alt="Imagen"/></a>
             <h3 class="equipos">El nuevo fichaje de 9z</h3>
             <p>Subtitulo explicativo de la noticia de equipos.</p>
             <div class="separador"></div>
-        </div>
+        </article>
     </div>
 
     <nav class="boton" id="boton"><a href="#noticias" ><i id="top" class="fas fa-angle-double-up"></i></a></nav>
-    <script>
-        function irArriba(pxPantalla){
-            window.addEventListener('scroll', () => {
-                var scroll = document.documentElement.scrollTop;
-                var top = document.getElementById('top');
-                
-                if(scroll > pxPantalla){
-                    top.style.right = 20 +'px';
-                }
-                else{
-                    top.style.right = -100 +'px';
-                }
-            })
-        }
-        irArriba(50);
-    </script>
+    
 </body>
 
 <footer id="footer">
-    <h4>Diario Gamer</h3>
-    <h5>Contactanos</h2> 
+    <h4>Diario Gamer</h4>
+    <h5>Contactanos</h5> 
     <div class="emojis">
         <a href="https://www.instagram.com/krawchik.ivan/?hl=es-la"><i class="fab fa-instagram"></i></a>
         <a href="https://www.instagram.com/krawchik.ivan/?hl=es-la"><i class="fab fa-facebook-f"></i></a>
@@ -237,5 +214,35 @@ SLIDER 3
     </div>
     <p class="copyright">Copyright 2021 SA DIARIO GAMER / Todos los derechos reservados</p>
 </footer>
-
+<script>
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides,4000);
+    }
+</script>
+<script>
+    function irArriba(pxPantalla){
+        window.addEventListener('scroll', () => {
+            var scroll = document.documentElement.scrollTop;
+            var top = document.getElementById('top');
+            
+            if(scroll > pxPantalla){
+                top.style.right = 20 +'px';
+            }
+            else{
+                top.style.right = -100 +'px';
+            }
+        })
+    }
+    irArriba(50);
+</script>
 </html>
