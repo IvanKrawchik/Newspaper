@@ -78,30 +78,12 @@
         <h3>Highlights</h3>
         <p>Subtitulo de juegos 4</p>
     </div>
-
-
-
-        <nav class="boton" id="boton">
-            <a href="#">
-                <i id="top" class="fas fa-angle-double-up"></i>
-            </a>
-        </nav>
-        <script>
-            function irArriba(pxPantalla){
-                window.addEventListener('scroll', () => {
-                    var scroll = document.documentElement.scrollTop;
-                    var top = document.getElementById('top');
-                    
-                    if(scroll > pxPantalla){
-                        top.style.right = 20 +'px';
-                    }
-                    else{
-                        top.style.right = -100 +'px';
-                    }
-                })
-            }
-            irArriba(50);
-        </script>
+    <nav class="boton" id="boton">
+        <a href="#">
+            <i id="top" class="fas fa-angle-double-up"></i>
+        </a>
+    </nav>
+        
 </body>
 
 <footer id="footer">
@@ -114,4 +96,22 @@
     </div>
     <p class="copyright">Copyright 2021 SA DIARIO GAMER / Todos los derechos reservados</p>
 </footer>
+
+<script>
+    function irArriba(pxPantalla){
+        window.addEventListener('scroll', () => {
+            var scroll = document.documentElement.scrollTop;
+            var top = document.getElementById('top');
+            
+            if(scroll > pxPantalla){
+                top.style.right = 20 +'px';
+            }
+            else{
+                top.style.right = -100 +'px';
+            }
+        })
+    }
+    irArriba(50);
+</script>
+
 </html>
