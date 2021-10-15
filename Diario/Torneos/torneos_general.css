@@ -1,10 +1,9 @@
 *{
     margin:0px;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
 }
-/* MENU RESPONSIVE */
 
+/* MENU RESPONSIVE */
 
 .wrapper{
     background: #171c24;
@@ -270,6 +269,8 @@ a .subtitulo{
         padding: 0% 5% 0% 5%;
     }
 }
+
+
 /* BODY */
 
 body h3{
@@ -286,9 +287,9 @@ h1{
 }
 .titulo{
     display: inline-block;
-    margin: 0% 29% 0% 29%;
-    padding: 10% 10% 0% 10%;
-    border-bottom: 3px #171c24 solid;
+    margin: 0% 35% 0% 35%;
+    padding: 10% 0% 0% 0%;
+    border-bottom: 3px grey solid;
     font-size: 30px;
 }
 img{
@@ -297,15 +298,7 @@ img{
 }
 .separador{
     margin: 1% 65% 0% 15%;
-    border-top: 2px #171c24 solid;
-}
-
-article:hover {
-    opacity: 0.8;
-}
-
-article h3,p{
-    color: black;
+    border-top: 2px grey solid;
 }
 
 /* BOTON */
@@ -328,31 +321,6 @@ article h3,p{
 }
 
 
-/* SLIDER */
-
-.mySlides{
-    display:none;
-}
-.text{
-    color:black;
-    font-size:18px;
-}
-.fade{
-    -webkit-animation-name:fade;
-    -webkit-animation-duration:1.5s;
-    animation-name:fade;
-    animation-duration:1.5s;
-}
-/*
-@-webkit-keyframes fade{
-    from{opacity:.3}
-    to{opacity:1}
-}
-@keyframes fade{
-    from{opacity:.3}
-    to{opacity:1}
-}
-*/
 /* FOOTER */
 
 h4, h5{
@@ -385,71 +353,4 @@ footer{
 }
 .emojis i:hover{
     color: #323c4e;
-}
-
-
-
-
-/* RESPONSIVE DESIGN */
-
-@media (min-width:600px) {
-    .titulo{
-        width: 40%;
-        margin: 0% 15% 0% 15%;
-        padding: 10% 15% 0% 15%;
-        text-align: center;
-    }
-    .emojis i{
-        padding: 0% 2% 0% 2%;
-    }
-    h4,h5{
-        letter-spacing:4px ;
-    }
-}
-@media (min-width:1024px){
-    .ultimasnoticias{
-        height: 1100px;
-        margin-top: 3%;
-        padding: 0% 15% 0% 15%;
-    }
-    .slideshow-container{
-        width: 100%;
-        height: 370px;
-    }
-    .slideshow-container img{
-        width: 48%;
-        height: 40%;
-        float: right;
-    }
-    .slideshow-container h3, .slideshow-container p{
-        display: inline-block;
-        width: 350px;
-    }
-    .slideshow-container p{
-        display: block;
-        padding-top: 1%;
-    }
-    .noticia1, .noticia2{
-        width: 100%;
-        display: inline-block;
-    }
-    .noticia1{
-        height: 370px;
-    }
-    #imgj1, #imge1{
-    width: 48%;
-    float: right;
-    }
-    body h3,body p, img, #imge1, .noticia2 h3, .noticia2 p{
-        padding: 0%;
-    }
-    .noticia1 p, .noticia2 p{
-        padding-top: 1%;
-    }
-    footer{
-        margin-top: 50px;
-    }
-    .separador{
-        margin: 1% 80% 0% 0%;
-    }
 }
