@@ -5,7 +5,13 @@
 }
 
 /* MENU RESPONSIVE */
-
+.fa-bars, fa-chevron-down{
+    color: #fff;
+}
+.lightmode{
+    position: absolute;
+    right: .6%;
+}
 .wrapper{
     background: #171c24;
     position: fixed;
@@ -27,7 +33,7 @@ nav .content{
     
 }
 nav .content .links{
-    margin-left: 300px;
+    margin-left: 200px;
     display: flex;
 }
 .content .logo a{
@@ -43,7 +49,7 @@ nav .content .links{
 .content .links li label{
     color: #fff;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 9px 17px;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -164,7 +170,7 @@ li ul{
         padding: 0% 3% 0% 3%;
     }
     nav .content .links{
-        margin-left: 85px;
+        margin-left: 20px;
     }
 }
 @media screen and (max-width: 1024px){
@@ -231,6 +237,11 @@ li ul{
     .ulsub{
         margin: 0;
     }
+    .content .logo a{
+        position: absolute;
+        right: 40%;  
+        top: 30%;
+    }
 }
 @media screen and (max-width: 400px){
     .wrapper nav{
@@ -268,7 +279,7 @@ a .subtitulo{
     text-decoration: underline;
 }
 .menu-titulos{
-    padding: 0% 5% 0% 5%;
+    padding: 0% 4% 0% 4%;
 }
 
 
@@ -284,7 +295,7 @@ body p{
 }
 h1{
     margin: 0.5% 3% 0% 0%;
-    float: right;
+    
 }
 .titulo{
     display: inline-block;
@@ -318,7 +329,6 @@ article h3,p{
 #top{
     position: fixed;
     bottom: 0px;
-    right: -100px;
     color: #fff;
     transition: all .5s;
     background-color: #171c24;
@@ -358,7 +368,7 @@ article h3,p{
 
 /* FOOTER */
 
-h4, h5{
+footer h5, footer h4{
     text-align: center;
     padding-bottom: 1%;
     color: #fff;
@@ -459,78 +469,73 @@ footer{
 
 
 /* BLACK MODE */
-/*
-@media (min-width:524px){
-    
-    
-    html{
-        background: #fff;
-        filter: invert(1) hue-rotate(180deg);
-    }
-    img, video, iframe, canvas, svg{
-        filter: invert(1) hue-rotate(180deg);
-    }
-    article:hover {
-        opacity: 0.5;
-    }
+
+
+body.dark  {
+    background: #000;
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body.dark img, video, iframe, canvas, svg{
+    filter: invert(1) hue-rotate(180deg);
+}
+body.dark article:hover {
+    opacity: 0.5;
+}
 
     
-    footer{
-        background: #fff;
-    }
-    footer h4,h5,i{
-        color: #000 !important;
-    }
-    footer h4,h5{
-        font-weight: 800!important;
-        letter-spacing: 3px;
-    }
-    footer h4{
-        font-size: 18px;
-    }
-    footer h5{
-        font-size: 16px;
-    }
-    .emojis i:hover{
-        color: #C3C3C3 !important;
-    }
+body.dark footer{
+    background: #fff;
+}
+body.dark footer h4, body.dark footer h5, body.dark footer i{
+    color: #000;
+}
+body.dark footer h4,h5{
+    font-weight: 800;
+}
+body.dark footer h4{
+    font-size: 18px;
+}
+body.dark footer h5{
+    font-size: 16px;
+}
+body.dark .emojis i:hover{
+    color: #C3C3C3;
+}
 
 
     
-    #top:hover{
-        background-color: #C3C3C3;
-    }
-    #top{
-        color: #fff !important ;
-    }
+body.dark #top:hover{
+    background-color: #C3C3C3;
+}
 
-    
-    .wrapper{
-        background: #fff;
-        border-bottom: 1px solid #000;
-    }
-    .menu-titulos a{
-        color: #000 !important;
-        font-weight: 600 !important;
-    }
-    .nombre{
-        color: #000 !important;
-    }
-    .ulsub{
-        background: #fff !important;
-    }
-    .content .links li a:hover,
-    .content .links li label:hover{
-        background: #C3C3C3;
-    }
-    .links{
-        background: #fff !important;
-    }
-    .links li label{
-        color: #000 !important;
-        font-weight: 600 !important;
-    }
-    .menu-titulos{
-    padding: 0% 4% 0% 4%;
-    }
+
+
+body.dark .wrapper{
+    background: #fff;
+    border-bottom: 1px solid #000;
+}
+body.dark .menu-titulos a{
+    color: #000 !important;
+    font-weight: 600 !important;
+}
+body.dark .nombre{
+    color: #000 !important;
+}
+body.dark .ulsub{
+    background: #fff !important;
+}
+body.dark .content .links li a:hover,
+.content .links li label:hover{
+    background: #C3C3C3;
+}
+body.dark .links{
+    background: #fff !important;
+}
+body.dark .links li label{
+    color: #000 !important;
+    font-weight: 600 !important;
+}
+body.dark .fa-bars{
+    color: #000;
 }
