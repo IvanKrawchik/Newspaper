@@ -5,7 +5,7 @@ This project is for my technicature database course.
 
 ## Objectives
 
-This project builds an application of a gamer newspaper with the following technologies:
+This project builds an web page of a gamer newspaper with the following technologies:
 -    HTML, Css and js (front-end)
 
 ## Installation
