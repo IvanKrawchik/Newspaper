@@ -1,0 +1,185 @@
+*{
+    margin:0px;
+}
+/* MENU RESPONSIVE */
+
+header{
+    position: fixed;
+    width: 100%;
+    background: grey;
+    height: 50px;
+    z-index: 10;
+}
+
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+#logo{
+    font-size: 30px;
+}
+#menu-lines:hover{
+    background-color: #555555;
+}
+
+#btn-menu{
+    display: none;
+}
+
+.menu{
+    position: relative;
+    top: 32px;
+    z-index: -1;
+}
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li a{
+    display: inline-block;
+    margin: 10%;
+    color: black;
+    text-decoration: none;
+}
+#menu-arrow-torneos{
+    display: none;
+}
+
+#menu-arrow-juegos{
+    display: none;
+}
+#menu-arrow-equipos{
+    display: none;
+}
+
+.menu li:hover{
+    background-color: #555555;
+}
+.menu-button{
+    float: right;
+    margin-top: 7%;
+    border: none;
+}
+#subtitulo{
+    font-size: 14px;
+    color: #B5B1B0;
+    margin-left: 25%;
+    color: red;
+}
+
+.litorneo:checked ~ #subtitulo{
+    color: white;
+}
+
+
+@media(max-width:2000px) {
+    header label{
+        display: inline-block;
+    }
+
+    .menu{
+        position: absolute;
+        background: grey;
+        width: 20%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+}
+
+h1 {
+    display:block;
+    text-align: center;
+}
+
+
+/* BODY */
+
+body h3{
+    font-size: 24px;
+    padding: 0% 15% 0% 15%;
+}
+body p{
+    font-size: 18px;
+    padding: 0% 15% 0% 15%;
+}
+h1{
+    margin: 0.5% 3% 0% 0%;
+    float: right;
+}
+.titulo{
+    display: inline-block;
+    margin: 0% 35% 0% 35%;
+    padding: 10% 0% 0% 0%;
+    border-bottom: 3px grey solid;
+    font-size: 30px;
+}
+img{
+    padding: 5% 0% 0% 15%;
+    width: 70%;
+}
+.separador{
+    margin: 1% 65% 0% 15%;
+    border-top: 2px grey solid;
+}
+
+/* BOTON */
+
+.boton:hover{
+    background-color: #555555;
+}
+#top{
+    position: fixed;
+    bottom: 0px;
+    right: -100px;
+    color: black;
+    transition: all 1s;
+    background-color: grey;
+    width: 60px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 14px;
+}
+
+
+
+/* FOOTER */
+
+h4, h5{
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+footer p{
+    text-align: center;
+    font-size: 14px;
+    color: #949494;
+}
+footer{
+    background-color: grey;
+    border-top: 7px #555555 solid;
+    margin-top: 3%;
+}
+.emojis{
+    padding: 0% 15% 0% 15%;
+}
+.emojis i{
+    padding: 1% 0% 2% 22%;
+    font-size: 30px;
+    color: black;
+}

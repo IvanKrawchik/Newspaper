@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Diario Gamer / Torneos</title>
+    <link rel="stylesheet" href="torneos_general.css">
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/b79f9ca1bd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <nav>
+                <input type="checkbox" id="show-menu">
+                <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+                <div class="content">
+                <div class="logo">
+                    <a href="#index_diario.html" class="nombre">Diario Gamer</a>
+                </div>
+                    <ul class="links">
+                        <li class="menu-titulos1"><a href="#" class="menu-titulos">Inicio</a></li>
+                        <li class="menu-titulos">
+                            <a href="#" class="desktop-link">Torneos</a>
+                            <input type="checkbox" id="show-torneos">
+                            <label for="show-torneos" class="menu-titulos">Torneos<i class="fas fa-chevron-down"></i></label>
+                            <ul class="ulsub">
+                                <li><a href="#" >- Fortnite World Cup</a></li>
+                                <li><a href="#" >- League of Legends World Championship</a></li>
+                                <li><a href="#" >- Major CS:GO</a></li>
+                                <li><a href="#" >- FIFAe WORLD CUP 2022</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-titulos">
+                            <a href="#" class="desktop-link">Equipos</a>
+                            <input type="checkbox" id="show-equipos">
+                            <label for="show-equipos">Equipos <i class="fas fa-chevron-down"></i></label>
+                            <ul class="ulsub">
+                                <li><a href="#">- 9z</a></li>
+                                <li><a href="#">- Ebro Gaming</a></li>
+                                <li><a href="#">- KRU Esports</a></li>
+                                <li><a href="#">- Mad Lions</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-titulos">
+                            <a href="#" class="desktop-link">Juegos</a>
+                            <input type="checkbox" id="show-juegos">
+                            <label for="show-juegos">Juegos <i class="fas fa-chevron-down"></i></label>
+                            <ul class="ulsub">
+                                <li><a href="#">- CS:GO</a></li>
+                                <li><a href="#">- FIFA 22</a></li>
+                                <li><a href="#">- Fortnite</a></li>
+                                <li><a href="#">- League of Legends</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-titulos"><a href="#footer" >Contactanos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="noticias">
+        <h2 class="titulo">Fortnite World Cup</h2>
+
+        <a href=""><img src=""></a>
+        <h3>Clasificacion</h3>
+        <p>Subtitulo de torneos 1</p>
+
+        <a href=""><img src=""></a>
+        <h3>Proximas Fechas</h3>
+        <p>Subtitulo de torneos 4</p>
+
+        <a href=""><img src=""></a>
+        <h3>Partidos Grabados</h3>
+        <p>Subtitulo de torneos 2</p>
+
+        <a href=""><img src=""></a>
+        <h3>Highlights</h3>
+        <p>Subtitulo de torneos 3</p>
+    </div>
+    <nav class="boton" id="boton">
+        <a href="#">
+            <i id="top" class="fas fa-angle-double-up"></i>
+        </a>
+    </nav>
+        
+</body>
+
+<footer id="footer">
+    <h4>Diario Gamer</h4>
+    <h5>Contactanos</h5> 
+    <div class="emojis">
+        <a href="https://www.instagram.com/krawchik.ivan/?hl=es-la"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/krawchik.ivan/?hl=es-la"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/krawchik.ivan/?hl=es-la"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p class="copyright">Copyright 2021 SA DIARIO GAMER / Todos los derechos reservados</p>
+</footer>
+
+<script>
+    function irArriba(pxPantalla){
+        window.addEventListener('scroll', () => {
+            var scroll = document.documentElement.scrollTop;
+            var top = document.getElementById('top');
+            
+            if(scroll > pxPantalla){
+                top.style.right = 20 +'px';
+            }
+            else{
+                top.style.right = -100 +'px';
+            }
+        })
+    }
+    irArriba(50);
+</script>
+
+</html>

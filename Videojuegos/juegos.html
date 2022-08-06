@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Diario Gamer / Juegos</title>
+    <link rel="stylesheet" href="juegos.css">
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/b79f9ca1bd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu" id="menu-lines"><i id="logo" class="fas fa-bars"></i></label>
+        <h1>Diario Gamer</h1>
+        <nav class="menu">
+            <br>
+            <ul>
+                <li><a href="index_diario.html" id="titulo">Inicio</a></li>
+                <li><a href="torneos.html" id="titulo">Torneos</a><input type="checkbox" class="menu-checkbox"
+                        name="menu-arrow-torneos" id="menu-arrow-torneos"><label for="menu-arrow-torneos"
+                        class="menu-button"><i class="fas fa-arrow-down" id="arrow-down-1"></i></label><ul class="submenu"><li><a href="#torneo1" id="subtitulo">Torneo 1</a></li><li><a href="#torneo2" id="subtitulo">Torneo 2</a></li><li><a href="#torneo3" id="subtitulo">Torneo 3</a></li></ul></li>
+                        
+                <li><a href="juegos.html" id="titulo">juegos</a><input type="checkbox" class="menu-checkbox"
+                        name="menu-arrow-juegos" id="menu-arrow-juegos"><label for="menu-arrow-juegos"
+                        class="menu-button"><i class="fas fa-arrow-down" id="arrow-down-2"></i></label><ul class="submenu"><li><a href="#csgo" id="subtitulo">CS GO</a></li><li><a href="#lol" id="subtitulo">League of Legends</a></li><li><a href="#fifa21" id="subtitulo">FIFA 21</a></li></ul></li>
+                    
+                <li><a href="equipos.html" id="titulo">Equipos</a><input type="checkbox" class="menu-checkbox"
+                        name="menu-arrow-equipos" id="menu-arrow-equipos"><label for="menu-arrow-equipos"
+                        class="menu-button"><i class="fas fa-arrow-down" id="arrow-down-3"></i></label><ul class="submenu"><li><a href="#astralis" id="subtitulo">Astralis</a></li><li><a href="#9z" id="subtitulo">9z</a></li><li><a href="#coscuarmy" id="subtitulo">Coscu Army</a></li></ul></li>
+                    
+                <li><a href="index_diario.html" id="titulo">Ultimas Noticias</a></li>
+                <li><a href="#contactanos" id="titulo">Contactanos</a>
+            </ul>
+        </nav>
+    </header>
+    <div class="noticias">
+        <h2 class="titulo">Noticias de juegos</h2>
+
+        <a href=""><img src=""></a>
+        <h3>Noticia 1</h3>
+        <p>Subtitulo de noticia 1</p>
+
+        <a href=""><img src=""></a>
+        <h3>Noticia 2</h3>
+        <p>Subtitulo de noticia 2</p>
+
+        <a href=""><img src=""></a>
+        <h3>Noticia 3</h3>
+        <p>Subtitulo de noticia 3</p>
+
+        <a href=""><img src=""></a>
+        <h3>Noticia 4</h3>
+        <p>Subtitulo de noticia 4</p>
+
+        <a href=""><img src=""></a>
+        <h3>Noticia 5</h3>
+        <p>Subtitulo de noticia 5</p>
+
+        <a href=""><img src=""></a>
+        <h3>Noticia 6</h3>
+        <p>Subtitulo de noticia 6</p>
+
+
+
+        <nav class="boton" id="boton"><a href="#noticias" ><i id="top" class="fas fa-angle-double-up"></i></a></nav>
+        <script>
+            function irArriba(pxPantalla){
+                window.addEventListener('scroll', () => {
+                    var scroll = document.documentElement.scrollTop;
+                    var top = document.getElementById('top');
+                    
+                    if(scroll > pxPantalla){
+                        top.style.right = 20 +'px';
+                    }
+                    else{
+                        top.style.right = -100 +'px';
+                    }
+                })
+            }
+            irArriba(50);
+        </script>
+</body>
+
+<footer>
+    <h4>Diario Gamer</h3>
+        <h5>Contactanos</h2> 
+        <div class="emojis">
+            <a href="https://www.instagram.com/krawchik.ivan/?hl=es-la"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/krawchik.ivan/?hl=es-la"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/krawchik.ivan/?hl=es-la"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>Copyright 2021 SA DIARIO GAMER / Todos los derechos reservados</p>
+</footer>
+</html>
