@@ -293,10 +293,6 @@ body p{
     font-size: 18px;
     padding: 0% 15% 0% 15%;
 }
-h1{
-    margin: 0.5% 3% 0% 0%;
-    
-}
 .titulo{
     display: inline-block;
     margin: 0% 29% 0% 29%;
@@ -405,11 +401,11 @@ footer{
 
 /* RESPONSIVE DESIGN */
 
-@media (min-width:600px) {
+@media (min-width:600px){
     .titulo{
-        width: 40%;
-        margin: 0% 15% 0% 15%;
-        padding: 10% 15% 0% 15%;
+        width: 55%;
+        margin: 7% 15% 0% 15%;
+        padding: 5% 8% 0% 7%;
         text-align: center;
     }
     .emojis i{
@@ -418,7 +414,23 @@ footer{
     h4,h5{
         letter-spacing:4px ;
     }
+    .content .logo a{
+        right: 35%;
+        width: 200px;
+    }
 }
+@media(max-width:450px) {
+    .content .logo a{
+        right: 30%;
+    }
+    .titulo{
+        width: 70%;
+        margin: 25% 15% 0% 15%;
+        padding: 0%;
+        text-align: center;
+    }
+}
+
 @media (min-width:1024px){
     .ultimasnoticias{
         height: 1100px;
